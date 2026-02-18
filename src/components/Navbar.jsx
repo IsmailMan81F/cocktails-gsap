@@ -11,22 +11,15 @@ const Navbar = () => {
       },
     });
 
-    navTween.fromTo(
-      "nav",
-      {
-        backgroundColor: "transparent",
-      },
-      {
-        backgroundColor: "#00000050",
-        backgroundFilter: "blur(10px)",
-        duration: 1,
-        ease: "power1.in",
-      },
-    );
+    navTween.to("nav", {
+      backgroundColor: "#00000050",
+      duration: 2,
+      ease: "power1.in",
+    });
   }, []);
 
   return (
-    <nav>
+    <nav className="bg-transparent">
       <div>
         <a href="#home" className="flex items-center gap-2">
           <img src="images/logo.png" alt="logo" />
